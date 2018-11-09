@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>mesaj kutusu</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <style>
+        #message-box {
+            background-color: aquamarine;
+            font-family: sans-serif;
+        }
+
+        #header {
+            height: 35px;
+            border: 1px solid white;
+            text-align: center;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        #header:hover {
+            background-color: aqua;
+            color: black;
+
+        }
+        
+        #content {
+            display: none;
+            font-size: 18px;
+            height: 200px;
+        }
+        #close{
+            float: right;
+            font-size: 25px;
+            border: 1px solid red;
+            padding: 2px 8px;
+            background-color: red;
+            color: white;
+        }
+
+    </style>
+    
+    <!---------------------  Scriptler ----------------  -->
+    <script>
+        $(document).ready(function() {
+
+            $("#header").click(function() {
+                $("#content").slideToggle();
+
+            });
+            
+            
+             $("#close").click(function() {
+                $("#message-box").hide("slow"); //mesaj box kutusu tamamen kayboldu..
+                
+            });
+
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <div id="message-box">
+        <div id="header">
+            MESAJINIZ VAR!
+            <span id="close">x</span>
+        </div>
+        <div id="content">
+            <p>Lorem ipsum dolor sit amet, consectetur lor sit amet, consectetur adipisicing elit. Laudantium, nisi esse ducimus nam cum, excepturi provident eaque, sapiente expedita quos quidem placeat distinctio ipsum animi numquam adipisicing elit. Laudantium, nisi esse ducimus nam cum, excepturi provident eaque, sapiente expedita quos quidem placeat distinctio ipsum animi numquam aliquid. Sapiente molestias, vero!</p>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
